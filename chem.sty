@@ -26,16 +26,6 @@
 \newcommand{\fillintheblank}{\underline{\hspace{2cm}}}
 \newcommand{\cmbreak}{\\[1cm]}
 
-%chemformula settings
-\newcommand{\keq}{$K_{eq}$ }
-
-\newcommand{\hydronium}{\ch{H3O^+}}
-\newcommand{\hydroxide}{\ch{OH^-}}
-
-\newcommand{\liquid}{_{(l)}}
-\newcommand{\solid}{_{(s)}}
-
-
 %formulas
 \newcommand{\acetate}{\ch{CH3COO^-}}
 \newcommand{\acetic}{\ch{CH3COOH}}
@@ -45,7 +35,43 @@
 \newcommand{\feiii}{\ch{Fe\pch[3]}}
 \newcommand{\scn}{\ch{SCN^-}}
 \newcommand{\fescn}{\ch{FeSCN\pch[2]}}
-\newcommand{\ka}{$K_a$}
+\newcommand{\hydronium}{\ch{H3O^+}}
+\newcommand{\hydroxide}{\ch{OH^-}}
 \newcommand{\kscn}{\ch{KSCN}}
-\newcommand{\ksp}{$K_{sp}$}
-\newcommand{\pka}{$pK_a$}
+\newcommand{\liquid}{_{(l)}}
+\newcommand{\solid}{_{(s)}}
+
+% keq
+\newif\ifstartedinmathmode
+\newcommand*{\keq}{
+  \relax\ifmmode\startedinmathmodetrue\else\startedinmathmodefalse\fi
+  {\ifstartedinmathmode K_{eq}\else$K_{eq}$\fi}%
+}
+
+% ka
+\newif\ifstartedinmathmode
+\newcommand*{\ka}{
+  \relax\ifmmode\startedinmathmodetrue\else\startedinmathmodefalse\fi
+  {\ifstartedinmathmode K_a\else$K_a$\fi}%
+}
+
+% Ksp
+\newif\ifstartedinmathmode
+\newcommand*{\ksp}{
+  \relax\ifmmode\startedinmathmodetrue\else\startedinmathmodefalse\fi
+  {\ifstartedinmathmode K_{sp}\else$K_{sp}$\fi}%
+}
+
+% pKa
+\newif\ifstartedinmathmode
+\newcommand*{\pka}{
+  \relax\ifmmode\startedinmathmodetrue\else\startedinmathmodefalse\fi
+  {\ifstartedinmathmode pK_a\else$pK_a$\fi}%
+}
+
+% pKb
+\newif\ifstartedinmathmode
+\newcommand*{\pkb}{
+  \relax\ifmmode\startedinmathmodetrue\else\startedinmathmodefalse\fi
+  {\ifstartedinmathmode pK_b\else$pK_b$\fi}%
+}
