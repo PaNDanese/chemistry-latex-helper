@@ -1,19 +1,20 @@
 \usepackage{siunitx}
 \usepackage{chemformula}
 \usepackage{chemfig}
+\usepackage{gensymb}
 
 %siunitx settings
 \DeclareSIUnit\Molar{\textsc{m}}
 \newcommand{\molar}[1]{\SI{#1}{\Molar}}
 \newcommand{\degc}[1]{\SI{#1}{\degreeCelsius}}
-\newcommand{\degk}[1]{\SI{#1}{\K}}
+\newcommand{\degk}[1]{\SI{#1}{\kelvin}}
 \newcommand{\gram}[1]{\SI{#1}{\g}}
-\newcommand{\kgram}[1]{\SI{#1}{\kilo\g}}
-\newcommand{\moles}[1]{\SI{#1}{\mol}}
-\newcommand{\liters}[1]{\SI{#1}{\L}}
-\newcommand{\ml}[1]{\SI{#1}{\mL}}
-\newcommand{\mmass}[1]{\SI{#1}{\g\per\mol}}
-\newcommand{\density}[1]{\SI{#1}{\g\per\mL}}
+\newcommand{\kgram}[1]{\SI{#1}{\kilo \g}}
+\newcommand{\moles}[1]{\SI{#1}{\mole}}
+\newcommand{\liters}[1]{\SI{#1}{\liter}}
+\newcommand{\ml}[1]{\SI{#1}{\milli \liter}}
+\newcommand{\mmass}[1]{\SI{#1}{\g \per \mole}}
+\newcommand{\density}[1]{\SI{#1}{\g \per \milli \liter}}
 
 % chemfig settings
 \setbondstyle{line width=1.5pt}
