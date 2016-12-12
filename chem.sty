@@ -2,10 +2,12 @@
 \usepackage{chemformula}
 \usepackage{chemfig}
 \usepackage{gensymb}
+\usepackage{chemmacros}
 
 %siunitx settings
 \DeclareSIUnit\Molar{\textsc{m}}
 \newcommand{\molar}[1]{\SI{#1}{\Molar}}
+\newcommand{\molarf}[2]{\ch{#2}\SI{#1}{\Molar}}
 \newcommand{\degc}[1]{\SI{#1}{\degreeCelsius}}
 \newcommand{\degk}[1]{\SI{#1}{\kelvin}}
 \newcommand{\gram}[1]{\SI{#1}{\g}}
@@ -32,7 +34,7 @@
 \newcommand{\ammonia}{\ch{NH3}}
 \newcommand{\ammonium}{\ch{NH4^+}}
 \newcommand{\calciumhydroxide}{\ch{Ca(OH)2}}
-\newcommand{\deltah}{$\Delta H$}
+\newcommand{\hion}{\ch{H^+}}
 \newcommand{\feiii}{\ch{Fe\pch[3]}}
 \newcommand{\hydrate}[2]{$\ch{#1}\cdot\ch{#2 H2O}$}
 \newcommand{\scn}{\ch{SCN^-}}
@@ -42,7 +44,56 @@
 \newcommand{\kscn}{\ch{KSCN}}
 \newcommand{\liquid}{_{(l)}}
 \newcommand{\solid}{_{(s)}}
+\newcommand{\bromide}{\ch{Br^-}}
+\newcommand{\iodide}{\ch{I^-}}
+\newcommand{\chloride}{\ch{Cl^-}}
+\newcommand{\caion}{\ch{Ca^{2+}}}
 
+% deltag
+\newif\ifstartedinmathmode
+\newcommand*{\deltag}{
+	\relax\ifmmode\startedinmathmodetrue\else\startedinmathmodefalse\fi
+	{\ifstartedinmathmode \Delta G\else$\Delta G$\fi}%
+}
+
+
+% deltas
+\newif\ifstartedinmathmode
+\newcommand*{\deltas}{
+	\relax\ifmmode\startedinmathmodetrue\else\startedinmathmodefalse\fi
+	{\ifstartedinmathmode \Delta S\else$\Delta S$\fi}%
+}
+
+
+% deltah
+\newif\ifstartedinmathmode
+\newcommand*{\deltah}{
+	\relax\ifmmode\startedinmathmodetrue\else\startedinmathmodefalse\fi
+	{\ifstartedinmathmode \Delta H\else$\Delta H$\fi}%
+}
+
+
+% deltahstd
+\newif\ifstartedinmathmode
+\newcommand*{\deltahstd}{
+	\relax\ifmmode\startedinmathmodetrue\else\startedinmathmodefalse\fi
+	{\ifstartedinmathmode \Delta H\degree\else$\Delta H\degree$\fi}%
+}
+
+
+% deltasstd
+\newif\ifstartedinmathmode
+\newcommand*{\deltasstd}{
+	\relax\ifmmode\startedinmathmodetrue\else\startedinmathmodefalse\fi
+	{\ifstartedinmathmode \Delta S\degree\else$\Delta S\degree$\fi}%
+}
+
+% deltagstd
+\newif\ifstartedinmathmode
+\newcommand*{\deltagstd}{
+	\relax\ifmmode\startedinmathmodetrue\else\startedinmathmodefalse\fi
+	{\ifstartedinmathmode \Delta G\degree\else$\Delta G\degree$\fi}%
+}
 
 % keq
 \newif\ifstartedinmathmode
