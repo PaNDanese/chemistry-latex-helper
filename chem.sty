@@ -109,6 +109,14 @@
   {\ifstartedinmathmode K_a\else$K_a$\fi}%
 }
 
+
+% kb
+\newif\ifstartedinmathmode
+\newcommand*{\kb}{
+	\relax\ifmmode\startedinmathmodetrue\else\startedinmathmodefalse\fi
+	{\ifstartedinmathmode K_b\else$K_b$\fi}%
+}
+
 % Ksp
 \newif\ifstartedinmathmode
 \newcommand*{\ksp}{
