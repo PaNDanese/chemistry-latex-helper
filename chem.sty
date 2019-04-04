@@ -3,21 +3,22 @@
 \usepackage{chemfig}
 \usepackage{gensymb}
 \usepackage{chemmacros}
+\usepackage{xspace}
 
 %siunitx settings
-\DeclareSIUnit\Molar{\textsc{m}}
+\DeclareSIUnit\Molar{\textsc{m}\xspace}
 
-\newcommand{\molar}[1]{\SI{#1}{\Molar}}
-\newcommand{\molarf}[2]{\SI{#1}{\Molar} \ch{#2} }
-\newcommand{\degc}[1]{\SI{#1}{\degreeCelsius}}
-\newcommand{\degk}[1]{\SI{#1}{\kelvin}}
-\newcommand{\gram}[1]{\SI{#1}{\g}}
-\newcommand{\kgram}[1]{\SI{#1}{\kilo \g}}
-\newcommand{\moles}[1]{\SI{#1}{\mole}}
-\newcommand{\liters}[1]{\SI{#1}{\liter}}
-\newcommand{\ml}[1]{\SI{#1}{\milli \liter}}
-\newcommand{\mmass}[1]{\SI{#1}{\g \per \mole}}
-\newcommand{\density}[1]{\SI{#1}{\g \per \milli \liter}}
+\newcommand{\molar}[1]{\SI{#1}{\Molar}\xspace}
+\newcommand{\molarf}[2]{\SI{#1}{\Molar} \ch{#2}\xspace}
+\newcommand{\degc}[1]{\SI{#1}{\degreeCelsius}\xspace}
+\newcommand{\degk}[1]{\SI{#1}{\kelvin}\xspace}
+\newcommand{\gram}[1]{\SI{#1}{\g}\xspace}
+\newcommand{\kgram}[1]{\SI{#1}{\kilo \g}\xspace}
+\newcommand{\moles}[1]{\SI{#1}{\mole}\xspace}
+\newcommand{\liters}[1]{\SI{#1}{\liter}\xspace}
+\newcommand{\ml}[1]{\SI{#1}{\milli \liter}\xspace}
+\newcommand{\mmass}[1]{\SI{#1}{\g \per \mole}\xspace}
+\newcommand{\density}[1]{\SI{#1}{\g \per \milli \liter}\xspace}
 
 % chemfig settings
 \setbondstyle{line width=1.5pt}
@@ -26,122 +27,44 @@
 \setcrambond{4.5pt}{0.4pt}{1pt}
 
 % general formatting helpers
-\newcommand{\fillintheblank}{\underline{\hspace{2cm}}}
+\newcommand{\fillintheblank}{\underline{\hspace{2cm}}\xspace}
 \newcommand{\cmbreak}{\\[1cm]}
 
 %formulas
-\newcommand{\acetate}{\ch{CH3COO^-}}
-\newcommand{\acetic}{\ch{CH3COOH}}
-\newcommand{\ammonia}{\ch{NH3}}
-\newcommand{\ammonium}{\ch{NH4^+}}
-\newcommand{\calciumhydroxide}{\ch{Ca(OH)2}}
-\newcommand{\hion}{\ch{H^+}}
-\newcommand{\feiii}{\ch{Fe\pch[3]}}
-\newcommand{\hydrate}[2]{$\ch{#1}\cdot\ch{#2 H2O}$}
-\newcommand{\scn}{\ch{SCN^-}}
-\newcommand{\fescn}{\ch{FeSCN\pch[2]}}
-\newcommand{\hydronium}{\ch{H3O^+}}
-\newcommand{\hydroxide}{\ch{OH^-}}
-\newcommand{\kscn}{\ch{KSCN}}
-\newcommand{\liquid}{_{(l)}}
-\newcommand{\solid}{_{(s)}}
-\newcommand{\bromide}{\ch{Br^-}}
-\newcommand{\iodide}{\ch{I^-}}
-\newcommand{\chloride}{\ch{Cl^-}}
-\newcommand{\caion}{\ch{Ca^{2+}}}
-
-% deltag
-\newif\ifstartedinmathmode
-\newcommand*{\deltag}{
-	\relax\ifmmode\startedinmathmodetrue\else\startedinmathmodefalse\fi
-	{\ifstartedinmathmode \Delta G\else$\Delta G$\fi}%
-}
+\newcommand{\acetate}{\ch{CH3COO^-}\xspace}
+\newcommand{\acetic}{\ch{CH3COOH}\xspace}
+\newcommand{\ammonia}{\ch{NH3}\xspace}
+\newcommand{\ammonium}{\ch{NH4^+}\xspace}
+\newcommand{\calciumhydroxide}{\ch{Ca(OH)2}\xspace}
+\newcommand{\hion}{\ch{H^+}\xspace}
+\newcommand{\feiii}{\ch{Fe\pch[3]}\xspace}
+\newcommand{\hydrate}[2]{$\ch{#1}\cdot\ch{#2 H2O}$\xspace}
+\newcommand{\scn}{\ch{SCN^-}\xspace}
+\newcommand{\fescn}{\ch{FeSCN\pch[2]\xspace}}
+\newcommand{\hydronium}{\ch{H3O^+}\xspace}
+\newcommand{\hydroxide}{\ch{OH^-}\xspace}
+\newcommand{\kscn}{\ch{KSCN}\xspace}
+\newcommand{\liquid}{_{(l)}\xspace}
+\newcommand{\solid}{_{(s)}\xspace}
+\newcommand{\bromide}{\ch{Br^-}\xspace}
+\newcommand{\iodide}{\ch{I^-}\xspace}
+\newcommand{\chloride}{\ch{Cl^-}\xspace}
+\newcommand{\caion}{\ch{Ca^{2+}}\xspace}
 
 
-% deltas
-\newif\ifstartedinmathmode
-\newcommand*{\deltas}{
-	\relax\ifmmode\startedinmathmodetrue\else\startedinmathmodefalse\fi
-	{\ifstartedinmathmode \Delta S\else$\Delta S$\fi}%
-}
-
-
-% deltah
-\newif\ifstartedinmathmode
-\newcommand*{\deltah}{
-	\relax\ifmmode\startedinmathmodetrue\else\startedinmathmodefalse\fi
-	{\ifstartedinmathmode \Delta H\else$\Delta H$\fi}%
-}
-
-
-% deltahstd
-\newif\ifstartedinmathmode
-\newcommand*{\deltahstd}{
-	\relax\ifmmode\startedinmathmodetrue\else\startedinmathmodefalse\fi
-	{\ifstartedinmathmode \Delta H\degree\else$\Delta H\degree$\fi}%
-}
-
-
-% deltasstd
-\newif\ifstartedinmathmode
-\newcommand*{\deltasstd}{
-	\relax\ifmmode\startedinmathmodetrue\else\startedinmathmodefalse\fi
-	{\ifstartedinmathmode \Delta S\degree\else$\Delta S\degree$\fi}%
-}
-
-% deltagstd
-\newif\ifstartedinmathmode
-\newcommand*{\deltagstd}{
-	\relax\ifmmode\startedinmathmodetrue\else\startedinmathmodefalse\fi
-	{\ifstartedinmathmode \Delta G\degree\else$\Delta G\degree$\fi}%
-}
-
-% keq
-\newif\ifstartedinmathmode
-\newcommand*{\keq}{
-  \relax\ifmmode\startedinmathmodetrue\else\startedinmathmodefalse\fi
-  {\ifstartedinmathmode K_{eq}\else$K_{eq}$\fi}%
-}
-
-% ka
-\newif\ifstartedinmathmode
-\newcommand*{\ka}{
-  \relax\ifmmode\startedinmathmodetrue\else\startedinmathmodefalse\fi
-  {\ifstartedinmathmode K_a\else$K_a$\fi}%
-}
-
-
-% kb
-\newif\ifstartedinmathmode
-\newcommand*{\kb}{
-	\relax\ifmmode\startedinmathmodetrue\else\startedinmathmodefalse\fi
-	{\ifstartedinmathmode K_b\else$K_b$\fi}%
-}
-
-% Ksp
-\newif\ifstartedinmathmode
-\newcommand*{\ksp}{
-  \relax\ifmmode\startedinmathmodetrue\else\startedinmathmodefalse\fi
-  {\ifstartedinmathmode K_{sp}\else$K_{sp}$\fi}%
-}
-
-% pKa
-\newif\ifstartedinmathmode
-\newcommand*{\pka}{
-  \relax\ifmmode\startedinmathmodetrue\else\startedinmathmodefalse\fi
-  {\ifstartedinmathmode pK_a\else$pK_a$\fi}%
-}
-
-% pKb
-\newif\ifstartedinmathmode
-\newcommand*{\pkb}{
-  \relax\ifmmode\startedinmathmodetrue\else\startedinmathmodefalse\fi
-  {\ifstartedinmathmode pK_b\else$pK_b$\fi}%
-}
-
-% pH
-\newif\ifstartedinmathmode
-\newcommand*{\ph}{
-  \relax\ifmmode\startedinmathmodetrue\else\startedinmathmodefalse\fi
-  {\ifstartedinmathmode pH\else$pH$\fi}%
-}
+\newcommand*{\deltagstd}{\ensuremath{\Delta G\degree}\xspace} % deltagstd
+\newcommand*{\deltag}{\ensuremath{\Delta G}\xspace} % deltag
+\newcommand*{\deltahstd}{\ensuremath{\Delta H\degree}\xspace} % deltahstd
+\newcommand*{\deltah}{\ensuremath{\Delta H}\xspace} % deltah
+\newcommand*{\deltasstd}{\ensuremath{\Delta S\degree}\xspace} % deltasstd
+\newcommand*{\deltas}{\ensuremath{\Delta S}\xspace} % deltas
+\newcommand*{\ka}{\ensuremath{K_a}\xspace} % ka
+\newcommand*{\kb}{\ensuremath{K_b}\xspace} % kb
+\newcommand*{\kc}{\ensuremath{K_c}\xspace} % kc
+\newcommand*{\keq}{\ensuremath{K_{eq}}\xspace} % keq
+\newcommand*{\kp}{\ensuremath{K_p}\xspace} % kp
+\newcommand*{\ksp}{\ensuremath{K_{sp}}\xspace} % Ksp
+\newcommand*{\ph}{\ensuremath{pH}\xspace} % pH
+\newcommand*{\pka}{\ensuremath{pK_a}\xspace} % pKa
+\newcommand*{\pkb}{\ensuremath{pK_b}\xspace} % pKb
+\newcommand*{\poh}{\ensuremath{pOH}\xspace} % pOH
